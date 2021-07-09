@@ -7,7 +7,7 @@ use Carbon\Carbon;
 
 class Siswa extends Model
 {
-    protected $table = 'Siswa';
+    protected $table = 'siswa';
     protected $primaryKey = 'id_siswa';
     protected $fillable = ['nis','nama','jenis_kelamin','tingkat_kelas','status'];
     public $timestamps = false;
