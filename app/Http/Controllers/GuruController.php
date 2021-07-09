@@ -54,7 +54,7 @@ class GuruController extends Controller
     }
     public function show($id){
         $resource = Guru::find($id);
-        return view('Admin/guru', ['resource'=>$resource]);
+        return view('admin/guru', ['resource'=>$resource]);
     }
     public function search(Request $request){
         $key = $request->key;

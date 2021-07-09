@@ -13,7 +13,7 @@ class SiswaController extends Controller
 {
     public function index(){
         $resource = Siswa::paginate(10);
-        return view('Admin/siswa', ['resource'=>$resource]);
+        return view('admin/siswa', ['resource'=>$resource]);
     }
     public function create(Request $request){
         $check = Siswa::where(['nis' => $request->nis])->get();

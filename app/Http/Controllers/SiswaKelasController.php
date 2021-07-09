@@ -11,7 +11,7 @@ class SiswaKelasController extends Controller
 {
     public function add($id){
         $resource=Siswa::get();
-        return view('Admin/SiswaKelas',['resource'=>$resource, 'kelas'=>$id]);
+        return view('admin/siswakelas',['resource'=>$resource, 'kelas'=>$id]);
     }
     public function create(Request $request)
     {
