@@ -9,7 +9,7 @@ class KelasController extends Controller
 {
     public function index(){
         $resource = Kelas::paginate(10);
-        return view('Admin/kelas', ['resource'=>$resource]);
+        return view('admin/kelas', ['resource'=>$resource]);
     }
     public function create(Request $request){
         $check = Kelas::where(['tingkat_kelas' => $request->tingkat_kelas, 'jurusan' => $request->jurusan, 'nama_kelas' => $request->nama_kelas, 'tahun_masuk' => $request->tahun_masuk, 'tahun_keluar' => $request->tahun_keluar])->get();
@@ -58,6 +58,6 @@ class KelasController extends Controller
     }
     public function show($id){
         $resource = Kelas::find($id);
-        return view('Admin/detail_kelas', ['resource'=>$resource]);
+        return view('admin/detail_kelas', ['resource'=>$resource]);
     }
 }
